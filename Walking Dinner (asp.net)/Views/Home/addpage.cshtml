@@ -1,0 +1,202 @@
+﻿@model Walking_Dinner__asp.net_.Models.persoondata
+
+@using (Html.BeginForm("addpage", "Home", FormMethod.Post))
+{
+    <body>
+        <div class="textbox">
+            @Html.TextBoxFor(u => u.volledigenaam, new { @class = "mystyle" })
+            @Html.TextBoxFor(u => u.straatnaam, new { @class = "mystyle2" })
+            @Html.TextBoxFor(u => u.huisnummer, new { @class = "mystyle3" })
+            @Html.TextBoxFor(u => u.postcode, new { @class = "mystyle4" })
+            @Html.TextBoxFor(u => u.plaats, new { @class = "mystyle5" })
+            @Html.TextBoxFor(u => u.telefoonnummer, new { @class = "mystyle6" })
+            @Html.TextBoxFor(u => u.emailadress, new { @class = "mystyle7" })
+            @Html.TextBoxFor(u => u.dieetwensen, new { @class = "mystyle8" })
+
+            @Html.TextBoxFor(u => u.volledigenaam2, new { @class = "mystyle9" })
+            @Html.TextBoxFor(u => u.straatnaam2, new { @class = "mystyle10" })
+            @Html.TextBoxFor(u => u.huisnummer2, new { @class = "mystyle11" })
+            @Html.TextBoxFor(u => u.postcode2, new { @class = "mystyle12" })
+            @Html.TextBoxFor(u => u.plaats2, new { @class = "mystyle13" })
+            @Html.TextBoxFor(u => u.telefoonnummer2, new { @class = "mystyle14" })
+            @Html.TextBoxFor(u => u.emailadress2, new { @class = "mystyle15" })
+            @Html.TextBoxFor(u => u.dieetwensen2, new { @class = "mystyle16" })
+            <input type="submit" name="addpage" id="submitbutton" value="clickedbutton">
+        </div>
+        <style>
+
+            #submitbutton {
+                font-size: 0;
+                background-image: url('../../images/button_aanmelden.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 80px;
+                width: 210px;
+                background-color: transparent;
+                border-color: transparent;
+                display: inline-block;
+                cursor: pointer;
+                position:relative;
+                left: 450px;
+                top: 60px;
+            }
+
+                #submitbutton:active {
+                    background-size: 90%;
+                    background-position: center;
+                }
+            body {
+                background-image: url('../../images/layout addpage2.png');
+                height: 1000px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: inline-block;
+            }
+
+            .mystyle {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 55px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle2 {
+                cursor: pointer;
+                background-repeat: no-repeat;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle3 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle4 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle5 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle6 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle7 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle8 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle9 {
+                cursor: pointer;
+                display: inline-block;
+                top: 200px;
+                width: 8.5%;
+                margin-left: 55px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle10 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle11 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle12 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle13 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle14 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle15 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .mystyle16 {
+                       cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+        </style>
+    </body>
+}

@@ -1,0 +1,544 @@
+﻿@model Walking_Dinner__asp.net_.Models.persoondataparallel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            parall
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelvolledigenaam, "volledige naam", new { @class = "label1" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelvolledigenaam, new { htmlAttributes = new { @class = "mystyle" } })
+                    @Html.ValidationMessageFor(model => model.parallelvolledigenaam, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelstraatnaam,"straatnaam", new { @class = "label2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelstraatnaam, new { htmlAttributes = new { @class = "mystyle2" } })
+                    @Html.ValidationMessageFor(model => model.parallelstraatnaam, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelhuisnummer,"huisnummer", new { @class = "label3" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelhuisnummer, new { htmlAttributes = new { @class = "mystyle3" } })
+                    @Html.ValidationMessageFor(model => model.parallelhuisnummer, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelpostcode,"postcode", new { @class = "label4" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelpostcode, new { htmlAttributes = new { @class = "mystyle4" } })
+                    @Html.ValidationMessageFor(model => model.parallelpostcode, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelplaats,"plaats", new { @class = "label5" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelplaats, new { htmlAttributes = new { @class = "mystyle5" } })
+                    @Html.ValidationMessageFor(model => model.parallelplaats, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.paralleltelefoonnummer,"plaats", new { @class = "label6" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.paralleltelefoonnummer, new { htmlAttributes = new { @class = "mystyle6" } })
+                    @Html.ValidationMessageFor(model => model.paralleltelefoonnummer, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelemailadress,"emailadress", new { @class = "label7" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelemailadress, new { htmlAttributes = new { @class = "mystyle7" } })
+                    @Html.ValidationMessageFor(model => model.parallelemailadress, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.paralleldieetwensen,"dieetwensen", new { @class = "label8" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.paralleldieetwensen, new { htmlAttributes = new { @class = "mystyle8" } })
+                    @Html.ValidationMessageFor(model => model.paralleldieetwensen, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelvolledigenaam2, "volledige naam", new { @class = "label9" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelvolledigenaam2, new { htmlAttributes = new { @class = "mystyle9" } })
+                    @Html.ValidationMessageFor(model => model.parallelvolledigenaam2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelstraatnaam2, "straatnaam", new { @class = "label10" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelstraatnaam2, new { htmlAttributes = new { @class = "mystyle10" } })
+                    @Html.ValidationMessageFor(model => model.parallelstraatnaam2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelhuisnummer2, "huisnummer", new { @class = "label11" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelhuisnummer2, new { htmlAttributes = new { @class = "mystyle11" } })
+                    @Html.ValidationMessageFor(model => model.parallelhuisnummer2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelpostcode2, "postcode", new { @class = "label12" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelpostcode2, new { htmlAttributes = new { @class = "mystyle12" } })
+                    @Html.ValidationMessageFor(model => model.parallelpostcode2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelplaats2, "plaats", new { @class = "label13" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelplaats2, new { htmlAttributes = new { @class = "mystyle13" } })
+                    @Html.ValidationMessageFor(model => model.parallelplaats2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.paralleltelefoonnummer2, "telefoonnummer", new { @class = "label14" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.paralleltelefoonnummer2, new { htmlAttributes = new { @class = "mystyle14" } })
+                    @Html.ValidationMessageFor(model => model.paralleltelefoonnummer2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.parallelemailadress2, "emailadress", new { @class = "label15" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.parallelemailadress2, new { htmlAttributes = new { @class = "mystyle15" } })
+                    @Html.ValidationMessageFor(model => model.parallelemailadress2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.paralleldieetwensen2, "dieetwensen", new { @class = "label16" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.paralleldieetwensen2, new { htmlAttributes = new { @class = "mystyle16" } })
+                    @Html.ValidationMessageFor(model => model.paralleldieetwensen2, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="submitbutton" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <label class="subtext">Vul in de gegevens  van je partner (optioneel)</label>
+        </div>
+    }
+
+    <style>
+
+
+        .submitbutton {
+            font-size: 0;
+            background-image: url('../../images/button_aanmelden.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 80px;
+            width: 210px;
+            background-color: transparent;
+            border-color: transparent;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            left: 460px;
+            top: 400px;
+        }
+
+            .submitbutton:active {
+                background-size: 90%;
+                background-position: center;
+            }
+
+            .submitbutton:start {
+                transition: 1s;
+                left: 0;
+            }
+
+        body {
+            background-image: url('../../images/layout addpage2.png');
+            height: 1000px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+        }
+
+        .subtext {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: x-large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 650px;
+            margin-left: 350px;
+        }
+
+        .label1 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 70px;
+        }
+
+        .label2 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 220px;
+        }
+
+        .label3 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 355px;
+        }
+
+        .label4 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 510px;
+        }
+
+        .label5 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 660px;
+        }
+
+        .label6 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 760px;
+        }
+
+        .label7 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 920px;
+        }
+
+        .label8 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 1060px;
+        }
+
+        .label9 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 70px;
+        }
+
+        .label10 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 220px;
+        }
+
+        .label11 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 355px;
+        }
+
+        .label12 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 510px;
+        }
+
+        .label13 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 660px;
+        }
+
+        .label14 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 760px;
+        }
+
+        .label15 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 920px;
+        }
+
+        .label16 {
+            color: purple;
+            font-family: 'Century Gothic';
+            font-size: large;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            margin-top: 800px;
+            margin-left: 1060px;
+        }
+
+        .mystyle {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 80px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle2 {
+            cursor: pointer;
+            background-repeat: no-repeat;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 220px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle3 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 360px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle4 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 500px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle5 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 640px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle6 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 780px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle7 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 920px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle8 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 550px;
+            width: 80px;
+            margin-left: 1060px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle9 {
+            cursor: pointer;
+            display: inline-block;
+            top: 840px;
+            width: 80px;
+            margin-left: 80px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle10 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 220px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle11 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 360px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle12 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 500px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle13 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 640px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle14 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 780px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle15 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 920px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+
+        .mystyle16 {
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 840px;
+            width: 80px;
+            margin-left: 1060px;
+            border: 4px solid purple;
+            position: absolute;
+        }
+    </style>
+</body>
+</html>

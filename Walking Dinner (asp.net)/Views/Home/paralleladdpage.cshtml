@@ -1,0 +1,206 @@
+﻿@model Walking_Dinner__asp.net_.Models.persoondataparallel
+
+lol
+@using (Html.BeginForm("paralleladdpage", "Home", FormMethod.Post))
+{
+    <body>
+        <div class="textbox">
+            @Html.TextBoxFor(u => u.parallelvolledigenaam, new { @class = "parallelmystyle" })
+            @Html.TextBoxFor(u => u.parallelstraatnaam, new { @class = "parallelmystyle2" })
+            @Html.TextBoxFor(u => u.parallelhuisnummer, new { @class = "parallelmystyle3" })
+            @Html.TextBoxFor(u => u.parallelpostcode, new { @class = "parallelmystyle4" })
+            @Html.TextBoxFor(u => u.parallelplaats, new { @class = "parallelmystyle5" })
+            @Html.TextBoxFor(u => u.paralleltelefoonnummer, new { @class = "parallelmystyle6" })
+            @Html.TextBoxFor(u => u.parallelemailadress, new { @class = "parallelmystyle7" })
+            @Html.TextBoxFor(u => u.paralleldieetwensen, new { @class = "parallelmystyle8" })
+
+            @Html.TextBoxFor(u => u.parallelvolledigenaam2, new { @class = "parallelmystyle9" })
+            @Html.TextBoxFor(u => u.parallelstraatnaam2, new { @class = "parallelmystyle10" })
+            @Html.TextBoxFor(u => u.parallelhuisnummer2, new { @class = "parallelmystyle11" })
+            @Html.TextBoxFor(u => u.parallelpostcode2, new { @class = "parallelmystyle12" })
+            @Html.TextBoxFor(u => u.parallelplaats2, new { @class = "parallelmystyle13" })
+            @Html.TextBoxFor(u => u.paralleltelefoonnummer2, new { @class = "parallelmystyle14" })
+            @Html.TextBoxFor(u => u.parallelemailadress2, new { @class = "parallelmystyle15" })
+            @Html.TextBoxFor(u => u.paralleldieetwensen2, new { @class = "parallelmystyle16" })
+            <input type="submit" name="addparallel" id="submitbuttonparallel" value="parallelbuttonclicked">
+
+
+
+
+        </div>
+        <style>
+            body {
+                background-image: url('../../images/layout addpage2.png');
+                height: 1000px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: inline-block;
+            }
+            #submitbuttonparallel {
+                font-size: 0;
+                background-image: url('../../images/button_aanmelden.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 80px;
+                width: 210px;
+                background-color: transparent;
+                border-color: transparent;
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                left: 450px;
+                top: 60px;
+            }
+
+                #submitbuttonparallel:active {
+                    background-size: 90%;
+                    background-position: center;
+                }
+
+            .parallelmystyle {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 55px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle2 {
+                cursor: pointer;
+                background-repeat: no-repeat;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle3 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle4 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle5 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle6 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle7 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle8 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 550px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle9 {
+                cursor: pointer;
+                display: inline-block;
+                top: 200px;
+                width: 8.5%;
+                margin-left: 55px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle10 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle11 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle12 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle13 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle14 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle15 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+
+            .parallelmystyle16 {
+                cursor: pointer;
+                display: inline-block;
+                margin-top: 200px;
+                width: 8.5%;
+                margin-left: 30px;
+                border: 4px solid #df58f0;
+            }
+        </style>
+    </body>
+}

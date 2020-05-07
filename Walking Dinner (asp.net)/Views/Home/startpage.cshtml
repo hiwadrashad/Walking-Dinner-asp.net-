@@ -1,0 +1,68 @@
+﻿
+    <body>
+        @using (Html.BeginForm("startpage", "Home", FormMethod.Post))
+        {
+            <input type="checkbox" name="agreecheckbox" checked=@ViewBag.IsCheck value="check" id="mydiv3" />
+
+            <span>
+                @ViewBag.Msg
+            </span>
+            <input id="mydiv2" type="submit" value="" />
+
+        }
+        <p id="mytext">Inschrijven in duo host mode</p>
+
+
+
+        <style type="text/css">
+            body {
+                background-image: url('../../images/background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            #mytext {
+                font-family: Arial;
+                font-weight: bold;
+                color: darkviolet;
+                margin-left: 150px;
+                font-size: large;
+                margin-top: 20px;
+            }
+
+
+            #mydiv2 {
+                cursor: pointer;
+                background-image: url('../../images/button_meld-je-aan.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                height: 80px;
+                width: 210px;
+                background-color: transparent;
+                border-color: transparent;
+                display: inline-block;
+                margin-top: 450px;
+                margin-left: 170px;
+                position: relative;
+            }
+
+                #mydiv2:active {
+                    background-size: 90%;
+                    background-position: center;
+                }
+
+            #mydiv3 {
+                cursor: pointer;
+                -ms-transform: scale(2);
+                -moz-transform: scale(2);
+                -webkit-transform: scale(2);
+                -o-transform: scale(2);
+                display: inline-block;
+                margin-left: 100px;
+                position: absolute;
+                top: 485px;
+                left: 20px;
+            }
+        </style>
+
+    </body>

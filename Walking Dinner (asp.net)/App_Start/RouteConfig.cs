@@ -16,7 +16,7 @@ namespace Walking_Dinner__asp.net_
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "startpage", id = UrlParameter.Optional }
+                defaults: new { controller = "persoondatas", action = "Create", id = UrlParameter.Optional }
             );
         }
     }

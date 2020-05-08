@@ -11,7 +11,8 @@ using Walking_Dinner__asp.net_.Models;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Runtime.Serialization;
-
+using Walking_Dinner__asp.net_.Documents;
+using Walking_Dinner__asp.net_.Data;
 
 namespace Walking_Dinner__asp.net_.Controllers
 {
@@ -30,7 +31,19 @@ namespace Walking_Dinner__asp.net_.Controllers
     }
         public class persoondatasController : Controller
     {
+
+        public persoondatasController()
+        {
+            dataset = new DataSet();
+            dataset.Tables.AddRange(new[]{
+            DbStub.GenerateDataTable<persoondata>(50),
+            DbStub.GenerateDataTable<persoondataparallel>(50)});
+        }
+
+
+        private DataSet dataset;
         private persoonDB db = new persoonDB();
+
         private persoonparallelDB dbparallel = new persoonparallelDB();
         Random rnd = new Random();
 
@@ -44,7 +57,10 @@ namespace Walking_Dinner__asp.net_.Controllers
         }
         public ActionResult Index()
         {
-            return View(db.data.ToList());
+            return View(dataset.Tables[0].AsEnumerable());
+
+            //return View(db.data.ToList());
+
         }
 
         [HttpPost]
@@ -78,6 +94,13 @@ namespace Walking_Dinner__asp.net_.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult Pdf()
+        {
+            PDF.Create(null);
+            return RedirectToAction("Create");
         }
 
         // POST: persoondatas/Create

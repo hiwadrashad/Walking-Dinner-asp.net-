@@ -21,6 +21,8 @@ namespace Walking_Dinner__asp.net_.Controllers
         }
 
 
+
+
         [HttpPost]
         public ActionResult startpage(string agreecheckbox)
         {

@@ -42,11 +42,11 @@ namespace Walking_Dinner__asp.net_.Models
 
         public string dieetwensen2 { get; set; }
 
-        public string groep { get; set; }
+        public int rondesperpersoon { get; set; }
 
-        public bool isgroepvol { get; set; }
+        public int aantaalkeermeegedaan { get; set; }
 
-        public bool gastheergeweest { get; set; }
+        public int gastheergeweestaantal { get; set; }
     }
 
     public class persoonDB : DbContext

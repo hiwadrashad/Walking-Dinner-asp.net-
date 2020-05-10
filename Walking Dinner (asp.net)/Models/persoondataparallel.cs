@@ -8,6 +8,7 @@ namespace Walking_Dinner__asp.net_.Models
 {
     public class persoondataparallel
     {
+     
         public int id { get; set; }
 
         public string parallelvolledigenaam { get; set; }
@@ -40,11 +41,12 @@ namespace Walking_Dinner__asp.net_.Models
 
         public string paralleldieetwensen2 { get; set; }
 
-        public string parallelgroep { get; set; }
+        public int parallelrondesperpersoon { get; set; }
 
-        public bool parallelisgroepvol { get; set; }
+        public int parallelaantaalkeermeegedaan { get; set; }
 
-        public bool parallelgastheergweeest { get; set; }
+        public int parallelgastheergeweestaantal { get; set; }
+
     }
 
     public class persoonparallelDB : DbContext

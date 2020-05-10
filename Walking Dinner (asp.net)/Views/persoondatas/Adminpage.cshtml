@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Walking_Dinner__asp.net_.Models.admin>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Adminpage</title>
+</head>
+<body>
+   <div class="tablediv">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.deelnemers)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.deelnemers)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>
+       
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create2" class="submitbutton2" />
+        </div>
+    </div>
+    <div>
+    </div>
+    <style>
+        .tablediv {
+        display: inline-block;
+        margin-left: 560px;
+        margin-top: 170px;
+
+        }
+        .table {
+            font-size: xx-large;
+            color: white;
+            font-family: 'Century Gothic';
+        }
+        body {
+            background-image: url('../../images/adminpage.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-block;
+        }
+
+        .submitbutton2 {
+            font-size: 0;
+            background-image: url('../../images/button_terug-keren.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 80px;
+            width: 210px;
+            background-color: transparent;
+            border-color: transparent;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            left: 510px;
+            top: 550px;
+        }
+
+            .submitbutton2:active {
+                background-size: 90%;
+                background-position: center;
+            }
+    </style>
+</body>
+</html>

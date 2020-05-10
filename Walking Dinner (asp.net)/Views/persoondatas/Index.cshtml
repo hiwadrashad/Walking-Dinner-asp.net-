@@ -40,17 +40,17 @@
 
         @foreach (var item in Model)
         {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.volledigenaam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.groep)
-        </td>
-        <td>
-            @Html.ActionLink("Delete", "Delete", new { id = item.id })
-        </td>
-    </tr>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.volledigenaam)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.groep)
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                </td>
+            </tr>
         }
 
     </table>

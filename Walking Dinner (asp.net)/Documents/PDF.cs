@@ -12,7 +12,7 @@ namespace Walking_Dinner__asp.net_.Documents
 {
     public static class PDF
     {
-        public static void Email(DateTime? dinnerDate, string dinnerType = "Ontbijt", int numberOfPeople = 8, string duoName = "Familie Barendson", string dieetWensen = "", string time = "")
+        public static void Email(DateTime? dinnerDate = null, string dinnerType = "Ontbijt", int numberOfPeople = 8, string duoName = "Familie Barendson", string dieetWensen = "", string time = "")
         {
             var today = DateTime.Now;
             if (dinnerDate == null) dinnerDate = today.AddDays(30);
@@ -60,7 +60,7 @@ namespace Walking_Dinner__asp.net_.Documents
             }
         }
 
-        public static void Round()
+        public static void Round(int roundNumber = 1, string naam = "Jaap en Annika", string dinnerAddress = "Hengelosestraat 5")
         {
             var spacer = new Paragraph("")
             {
@@ -69,15 +69,12 @@ namespace Walking_Dinner__asp.net_.Documents
             };
 
             var today = DateTime.Now;
-            int roundNumber = 1;
-            string naam = "Jaap en Annika";
-            var address = "Hengelosestraat 5";
             var dinnerDate = today.AddDays(30);
             var pdfDoc = new Document(PageSize.A4, 40f, 40f, 60f, 60f);
             var path = System.AppDomain.CurrentDomain.BaseDirectory + "PDF\\";
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
             var name = "WalkingDinner-" + (dinnerDate != null ? dinnerDate.ToString("dd-MM-yyyy") : "n/a") + "round" + roundNumber + ".pdf";
-            pdfDoc.Add(new Paragraph("Beste Meneer/Mevrouw " + naam));
+            pdfDoc.Add(new Paragraph("Beste duo " + naam));
             pdfDoc.Add(spacer);
             pdfDoc.Add(spacer);
             if (roundNumber == 1)
@@ -85,7 +82,7 @@ namespace Walking_Dinner__asp.net_.Documents
                 pdfDoc.Add(new Paragraph("Welkom op de Walking Dinner, wij hopen dat u een gezellige dag heeft."));
             }
 
-            pdfDoc.Add(new Paragraph("Voor de " + roundNumber + "e ronde mag u naar " + address));
+            pdfDoc.Add(new Paragraph("Voor de " + roundNumber + "e ronde mag u naar " + dinnerAddress));
             pdfDoc.Add(new Paragraph("Success!"));
             pdfDoc.Add(spacer);
             pdfDoc.Add(spacer);

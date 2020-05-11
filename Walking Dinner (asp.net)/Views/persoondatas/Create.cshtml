@@ -16,7 +16,7 @@
 
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
             <div class="form-group">
-                @Html.LabelFor(model => model.volledigenaam,"volledige naam", new { @class = "label1" })
+                @Html.LabelFor(model => model.volledigenaam, "volledige naam", new { @class = "label1" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.volledigenaam, new { htmlAttributes = new { @class = "mystyle" } })
                     @Html.ValidationMessageFor(model => model.volledigenaam, "", new { @class = "text-danger" })
@@ -80,7 +80,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.volledigenaam2,"volledige naam", new { @class = "label9" })
+                @Html.LabelFor(model => model.volledigenaam2, "volledige naam", new { @class = "label9" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.volledigenaam2, new { htmlAttributes = new { @class = "mystyle9" } })
                     @Html.ValidationMessageFor(model => model.volledigenaam2, "", new { @class = "text-danger" })
@@ -88,7 +88,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.straatnaam2,"straatnaam", new { @class = "label10" })
+                @Html.LabelFor(model => model.straatnaam2, "straatnaam", new { @class = "label10" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.straatnaam2, new { htmlAttributes = new { @class = "mystyle10" } })
                     @Html.ValidationMessageFor(model => model.straatnaam2, "", new { @class = "text-danger" })
@@ -96,7 +96,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.huisnummer2,"huisnummer", new { @class = "label11" })
+                @Html.LabelFor(model => model.huisnummer2, "huisnummer", new { @class = "label11" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.huisnummer2, new { htmlAttributes = new { @class = "mystyle11" } })
                     @Html.ValidationMessageFor(model => model.huisnummer2, "", new { @class = "text-danger" })
@@ -104,7 +104,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.postcode2,"postcode", new { @class = "label12" })
+                @Html.LabelFor(model => model.postcode2, "postcode", new { @class = "label12" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.postcode2, new { htmlAttributes = new { @class = "mystyle12" } })
                     @Html.ValidationMessageFor(model => model.postcode2, "", new { @class = "text-danger" })
@@ -112,7 +112,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.plaats2,"plaats", new { @class = "label13" })
+                @Html.LabelFor(model => model.plaats2, "plaats", new { @class = "label13" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.plaats2, new { htmlAttributes = new { @class = "mystyle13" } })
                     @Html.ValidationMessageFor(model => model.plaats2, "", new { @class = "text-danger" })
@@ -120,7 +120,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.telefoonnummer2,"telefoonnummer", new { @class = "label14" })
+                @Html.LabelFor(model => model.telefoonnummer2, "telefoonnummer", new { @class = "label14" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.telefoonnummer2, new { htmlAttributes = new { @class = "mystyle14" } })
                     @Html.ValidationMessageFor(model => model.telefoonnummer2, "", new { @class = "text-danger" })
@@ -128,7 +128,7 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.emailadress2,"emailadress", new { @class = "label15" })
+                @Html.LabelFor(model => model.emailadress2, "emailadress", new { @class = "label15" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.emailadress2, new { htmlAttributes = new { @class = "mystyle15" } })
                     @Html.ValidationMessageFor(model => model.emailadress2, "", new { @class = "text-danger" })
@@ -136,12 +136,13 @@
             </div>
 
             <div class="form-group">
-                @Html.LabelFor(model => model.dieetwensen2,"dieetwensen", new { @class = "label16" })
+                @Html.LabelFor(model => model.dieetwensen2, "dieetwensen", new { @class = "label16" })
                 <div class="col-md-10">
                     @Html.EditorFor(model => model.dieetwensen2, new { htmlAttributes = new { @class = "mystyle16" } })
                     @Html.ValidationMessageFor(model => model.dieetwensen2, "", new { @class = "text-danger" })
                 </div>
             </div>
+
 
 
             <div class="form-group">
@@ -152,11 +153,15 @@
         </div>
         <div>
             <label class="subtext">Vul in de gegevens  van je partner (optioneel)</label>
-            </div>
+        </div>
+
+        <div>
+            @Html.ActionLink("Create PDF", "Pdf")
+        </div>
     }
 
     <style>
-        
+
 
         .submitbutton {
             font-size: 0;
@@ -189,7 +194,7 @@
         }
         .subtext {
             color: purple;
-            font-family:'Century Gothic';
+            font-family: 'Century Gothic';
             font-size: x-large;
             font-weight: bold;
             display: inline-block;

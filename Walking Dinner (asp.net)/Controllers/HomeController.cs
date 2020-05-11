@@ -15,7 +15,7 @@ namespace Walking_Dinner__asp.net_.Controllers
         List<List<string>> persoonlijst;
         List<List<string>> parallelpersoonlijst;
         Random rnd = new Random();
-        public ActionResult pressed()
+        public ActionResult Pressed()
         {
             return View("addpage");
         }
@@ -24,7 +24,7 @@ namespace Walking_Dinner__asp.net_.Controllers
 
 
         [HttpPost]
-        public ActionResult startpage(string agreecheckbox)
+        public ActionResult Startpage(string agreecheckbox)
         {
 
             if (agreecheckbox == "check")

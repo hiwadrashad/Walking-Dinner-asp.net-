@@ -20,6 +20,8 @@ using iTextSharp.text.pdf;
 using Microsoft.Ajax.Utilities;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using Walking_Dinner__asp.net_.Documents;
+using Walking_Dinner__asp.net_.Data;
 
 namespace Walking_Dinner__asp.net_.Controllers
 {
@@ -192,6 +194,13 @@ namespace Walking_Dinner__asp.net_.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult Pdf()
+        {
+            PDF.Create(null);
+            return RedirectToAction("Create");
         }
 
         // POST: persoondatas/Create

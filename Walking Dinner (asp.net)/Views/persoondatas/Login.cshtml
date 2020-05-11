@@ -12,6 +12,7 @@
     <title>Login</title>
 </head>
 <body>
+    <div id="loginscreen">
     @using (Html.BeginForm()) 
     {
         @Html.AntiForgeryToken()
@@ -31,21 +32,60 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.wachtwoord, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.wachtwoord, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.PasswordFor(model => model.wachtwoord, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.wachtwoord, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Create" name="submitbutton2" class="submitbutton4" />
                 </div>
             </div>
         </div>
     }
-    
-    <div>
-        @Html.ActionLink("Back to List", "Index")
     </div>
+
+   <style>
+       .submitbutton4 {
+           font-size: 0;
+           background-image: url('../../images/button_login (1).png');
+           background-size: 60%;
+           background-repeat: no-repeat;
+           height: 40px;
+           width: 150px;
+           background-position: center;
+           background-color: transparent;
+           border-color: transparent;
+           display: inline-block;
+           cursor: pointer;
+           position: relative;
+           top: 40px;
+         
+       }
+
+           .submitbutton4:active {
+               background-size: 50%;
+               background-position: center;
+           }
+
+       body {
+           background-image: url('../../images/login background.jpg');
+           background-repeat: no-repeat;
+           background-size: cover;
+           display: inline-block;
+       }
+
+       #loginscreen {
+           display: inline-block;
+           top: 230px;
+           left: 550px;
+           position: relative;
+           font-family: 'Century Gothic';
+           color: white;
+           font-weight: bolder;
+               
+       }
+   </style>
 </body>
 </html>

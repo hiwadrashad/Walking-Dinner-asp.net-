@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<Walking_Dinner__asp.net_.Models.admin>
 
-
 <!DOCTYPE html>
 
 <html>
@@ -23,18 +22,18 @@
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.deelnemers)
-                </td>
-                <td>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                </td>
-            </tr>
-        }
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.deelnemers)
+        </td>
+        <td>
+        </td>
+    </tr>
+     }
 
     </table>
     </div>

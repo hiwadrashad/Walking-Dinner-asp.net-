@@ -240,7 +240,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Data\DbStub.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\persoondatasController.cs" />
     <Compile Include="Documents\PDF.cs" />
     <Compile Include="Global.asax.cs">
@@ -291,16 +290,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\startpage.cshtml" />
-    <Content Include="Views\Home\addpage.cshtml" />
-    <Content Include="Views\Home\paralleladdpage.cshtml" />
     <Content Include="Views\persoondatas\Create.cshtml" />
-    <Content Include="Views\persoondatas\Delete.cshtml" />
-    <Content Include="Views\persoondatas\Details.cshtml" />
-    <Content Include="Views\persoondatas\Edit.cshtml" />
     <Content Include="Views\persoondatas\Index.cshtml" />
     <Content Include="Views\persoondatas\CreateParallel.cshtml" />
     <Content Include="Views\persoondatas\Adminpage.cshtml" />
+    <Content Include="Views\persoondatas\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

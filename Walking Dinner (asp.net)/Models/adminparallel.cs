@@ -10,15 +10,15 @@ namespace Walking_Dinner__asp.net_.Models
     {
         public int id { get; set; }
 
-        public int maximum { get; set; }
+        public int parallelmaximum { get; set; }
 
-        public string hostpergroep { get; set; }
+        public string parallelhostpergroep { get; set; }
 
-        public List<string> deelnemers { get; set; }
+        public List<string> paralleldeelnemers { get; set; }
 
-        public byte[] preperatordata { get; set; }
+        public byte[] parallelpreperatordata { get; set; }
 
-        public byte[] bezoekersdata { get; set; }
+        public byte[] parallelbezoekersdata { get; set; }
     }
 
     public class AdminparallelDB : DbContext

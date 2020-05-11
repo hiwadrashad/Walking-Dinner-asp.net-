@@ -15,45 +15,14 @@
     @using (Html.BeginForm("index", "persoondatas", FormMethod.Post))
     {
         <input type="checkbox" name="agreecheckbox" checked=@ViewBag.IsCheck value="check" id="mydiv3" />
+        <input id="mydiv2" type="submit" name="submitbutton" value="regular" />
+        <input id="mydivadmin" type="submit" name="submitbutton" value="admin" />
 
-        <span>
-            @ViewBag.Msg
-        </span>
-        <input id="mydiv2" type="submit" value="" />
 
     }
     <p id="mytext">Inschrijven in duo host mode</p>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.volledigenaam)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.groep)
-            </th>
-            <th></th>
-        </tr>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.volledigenaam)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.groep)
-                </td>
-                <td>
-                    @Html.ActionLink("Delete", "Delete", new { id = item.id })
-                </td>
-            </tr>
-        }
-
-    </table>
     <style type="text/css">
         body {
             background-image: url('../../images/background.jpg');
@@ -70,6 +39,21 @@
             margin-top: 20px;
         }
 
+        #mydivadmin {
+            cursor: pointer;
+            background-image: url('../../images/button_admin-login.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            height: 80px;
+            width: 210px;
+            background-color: transparent;
+            border-color: transparent;
+            display: inline-block;
+            margin-top: 600px;
+            margin-left: -215px;
+            position: absolute;
+            font-size: 0;
+        }
 
         #mydiv2 {
             cursor: pointer;
@@ -84,6 +68,7 @@
             margin-top: 450px;
             margin-left: 170px;
             position: relative;
+            font-size: 0;
         }
 
             #mydiv2:active {

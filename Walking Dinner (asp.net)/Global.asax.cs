@@ -20,10 +20,16 @@ namespace Walking_Dinner__asp.net_
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Database.SetInitializer<AdminparallelDB>(new DropCreateDatabaseIfModelChanges<AdminparallelDB>());
-
+            //Database.SetInitializer<AdminparallelDB>(new DropCreateDatabaseIfModelChanges<AdminparallelDB>());
             //Database.SetInitializer<AdminDB>(new DropCreateDatabaseIfModelChanges<AdminDB>());
-            persoondatasController.StartupClass.Init();
+
+            //            Database.SetInitializer<persoonDB>(new DropCreateDatabaseIfModelChanges<persoonDB>());
+
+            //          Database.SetInitializer<persoonparallelDB>(new DropCreateDatabaseIfModelChanges<persoonparallelDB>());
+
+
+            persoondatasController.StartupClass startupobject = new persoondatasController.StartupClass();
+            startupobject.Init();
 
 
 

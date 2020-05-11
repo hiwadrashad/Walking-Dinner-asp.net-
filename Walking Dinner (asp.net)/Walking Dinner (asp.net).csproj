@@ -239,6 +239,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\admin.cs" />
+    <Compile Include="Models\adminlogindata.cs" />
     <Compile Include="Models\adminparallel.cs" />
     <Compile Include="Models\persoondata.cs" />
     <Compile Include="Models\persoondataparallel.cs" />
@@ -251,6 +252,7 @@
     <Content Include="images\adminpage.jpg" />
     <Content Include="images\background.jpg" />
     <Content Include="images\button_aanmelden.png" />
+    <Content Include="images\button_admin-login.png" />
     <Content Include="images\button_meld-je-aan.png" />
     <Content Include="images\button_terug-keren.png" />
     <Content Include="images\icons8-checked-checkbox-96.png" />

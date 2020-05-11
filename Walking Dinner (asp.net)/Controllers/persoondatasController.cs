@@ -74,17 +74,18 @@ namespace Walking_Dinner__asp.net_.Controllers
         public static List<string> keuzegerechten = new List<string> { "Aperitief met amuse", "Nagerecht" };
         public static List<string> keuzegerechten2 = new List<string> { "Koud voorgerecht", "Warm voorgerecht" };
 
-        private static persoonDB db = new persoonDB();
-        private static persoonparallelDB dbparallel = new persoonparallelDB();
-        private static AdminDB dbadmin = new AdminDB();
-        private static AdminparallelDB dbparalleladmin = new AdminparallelDB();
+        private  persoonDB db = new persoonDB();
+        private  persoonparallelDB dbparallel = new persoonparallelDB();
+        private  AdminDB dbadmin = new AdminDB();
+        private  AdminparallelDB dbparalleladmin = new AdminparallelDB();
+        private adminlogindata adminlogin = new adminlogindata();
 
         Random rnd = new Random();
 
 
-        public static class StartupClass
+        public class StartupClass
         {
-            public static void Init()
+            public void Init()
             {
                 maximumlijst.Clear();
                 personenpergroep.Clear();
@@ -92,7 +93,12 @@ namespace Walking_Dinner__asp.net_.Controllers
                 rondesperpersoon.Clear();
                 aantalkeermeegedaanpersoon.Clear();
                 hostpergroep.Clear();
-                foreach (var item10 in db.data)
+                persoonDB persoonobject = new persoonDB();
+                persoonparallelDB persoonparallelobject = new persoonparallelDB();
+                AdminDB adminobject = new AdminDB();
+                AdminparallelDB adminparallelobject = new AdminparallelDB();
+
+                foreach (var item10 in persoonobject.data)
                 {
                     if (aantalkeermeegedaanpersoon.ContainsKey(item10.emailadress))
                     {
@@ -121,7 +127,7 @@ namespace Walking_Dinner__asp.net_.Controllers
                         aantalkeermeegedaanpersoon.Add(item10.emailadress, item10.rondesperpersoon);
                     }
                 }
-                foreach (var item11 in dbadmin.data)
+                foreach (var item11 in adminobject.data)
                 {
                     maximumlijst.Add(item11.maximum);
                     personenpergroep.Add(item11.deelnemers);
@@ -149,15 +155,22 @@ namespace Walking_Dinner__asp.net_.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(string agreecheckbox)
+        public ActionResult Index(string agreecheckbox, string submitbutton)
         {
-            if (agreecheckbox == "check")
+            if (submitbutton == "regular")
             {
-                return View("CreateParallel");
+                if (agreecheckbox == "check")
+                {
+                    return View("CreateParallel");
+                }
+                else
+                {
+                    return View("Create");
+                }
             }
             else
             {
-                return View("Create");
+                return View("Adminpage");
             }
         }
         // GET: persoondatas/Details/5

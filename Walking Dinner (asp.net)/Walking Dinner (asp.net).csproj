@@ -264,6 +264,7 @@
     <Content Include="images\button_admin-login.png" />
     <Content Include="images\button_login %281%29.png" />
     <Content Include="images\button_meld-je-aan.png" />
+    <Content Include="images\button_print-pdf.png" />
     <Content Include="images\button_terug-keren.png" />
     <Content Include="images\icons8-checked-checkbox-96.png" />
     <Content Include="images\icons8-unchecked-checkbox-96.png" />

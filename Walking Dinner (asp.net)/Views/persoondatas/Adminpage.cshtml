@@ -8,56 +8,120 @@
     <title>Adminpage</title>
 </head>
 <body>
-   <div class="tablediv">
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.deelnemers)
-            </th>
-            <th></th>
-        </tr>
+    @{
+        var model2items = (List<Walking_Dinner__asp.net_.Models.adminparallel>)ViewBag.model2;
+    }
+    <div class="tablediv">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.deelnemers)
+                </th>
+                <th>print-file</th>
+            </tr>
 
-        @foreach (var item in Model)
-        {
+            @foreach (var item in Model)
+            {
 
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.deelnemers)
-        </td>
-        <td>
-        </td>
-    </tr>
-     }
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.deelnemers)
+                    </td>
+                    <td>
+                        <input type="button" name="pdffile" value="@item.id" class="printbutton">
+                    </td>
+                </tr>
+            }
 
-    </table>
+        </table>
     </div>
-       
+    <div class="tablediv2">
+        <table class="table2">
+            <tr>
+                <th>
+                    id
+                </th>
+                <th>
+                    deelnemers
+                </th>
+                <th>print-file</th>
+            </tr>
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create2" class="submitbutton2" />
-        </div>
+            @foreach (var item2 in model2items)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item2.paralleldeelnemers)
+                    </td>
+                    <td>
+                        <input type="button" name="pdffile2" value="@item2.id" class="printbutton">
+                    </td>
+                </tr>
+            }
+
+        </table>
     </div>
-    <div>
+
+    <div class="title1">
+        regulier
     </div>
+    <div class="title2">
+        parallel
+    </div>
+
+
     <style>
-        .tablediv {
-        display: inline-block;
-        margin-left: 560px;
-        margin-top: 170px;
-
+        .title1 {
+            font-size: xx-large;
+            color: white;
+            font-family: 'Century Gothic';
+            display: inline-block;
+            position: absolute;
+            margin-left: -220px;
+            margin-top: 100px;
         }
+
+        .title2 {
+            font-size: xx-large;
+            color: white;
+            font-family: 'Century Gothic';
+            display: inline-block;
+            position: absolute;
+            margin-left: 180px;
+            margin-top: 100px;
+        }
+        .tablediv {
+            display: inline-block;
+            margin-left: 260px;
+            margin-top: 170px;
+        }
+
+        .tablediv2 {
+            font-size: xx-large;
+            color: white;
+            font-family: 'Century Gothic';
+            display: inline-block;
+            margin-top: 170px;
+            margin-left: 50px;
+            position: absolute;
+        }
+
         .table {
             font-size: xx-large;
             color: white;
             font-family: 'Century Gothic';
         }
+
         body {
             background-image: url('../../images/adminpage.jpg');
             background-repeat: no-repeat;
@@ -65,26 +129,18 @@
             display: inline-block;
         }
 
-        .submitbutton2 {
+        .printbutton {
             font-size: 0;
-            background-image: url('../../images/button_terug-keren.png');
-            background-size: 100%;
+            background-image: url('../../images/button_print-pdf.png');
+            background-size: 60%;
             background-repeat: no-repeat;
-            height: 80px;
-            width: 210px;
             background-color: transparent;
             border-color: transparent;
-            display: inline-block;
             cursor: pointer;
-            position: relative;
-            left: 510px;
-            top: 550px;
+            height: 40px;
+            width: 150px;
+            background-position: center;
         }
-
-            .submitbutton2:active {
-                background-size: 90%;
-                background-position: center;
-            }
     </style>
 </body>
 </html>

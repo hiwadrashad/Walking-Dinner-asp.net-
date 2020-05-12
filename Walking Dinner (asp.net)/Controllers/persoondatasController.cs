@@ -23,6 +23,9 @@ using System.Text.RegularExpressions;
 using Walking_Dinner__asp.net_.Documents;
 using Walking_Dinner__asp.net_.Data;
 using Org.BouncyCastle.Crypto.Paddings;
+using System.Drawing.Printing;
+using System.Drawing;
+using System.Diagnostics;
 
 namespace Walking_Dinner__asp.net_.Controllers
 {
@@ -198,8 +201,91 @@ namespace Walking_Dinner__asp.net_.Controllers
         // GET: persoondatas
         public ActionResult Adminpage()
         {
-             
+            ViewBag.model2 = dbparalleladmin.data.ToList();
             return View(dbadmin.data.ToList());
+        }
+
+        [HttpPost]
+        public ActionResult Adminpage(string pdffile2, string pdffile)
+        {
+            if (!(storenumbers.First() == 12 / x50))
+            {
+                if (dbadmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().preperatordata.Any())
+                {
+                    var imagememorystream = new MemoryStream(dbadmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().preperatordata.FirstOrDefault());
+                    System.Drawing.Image imgfromstream = System.Drawing.Image.FromStream(imagememorystream);
+                    imgfromstream.Save("print1.png");
+                    Process p = new Process();
+                    p.StartInfo = new ProcessStartInfo()
+                    {
+                        CreateNoWindow = true,
+                        Verb = "print",
+                        FileName = Path.GetFullPath("print1.png")
+                    };
+                    p.Start();
+                    
+
+                imagememorystream.Close();
+                }
+                if (dbadmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().bezoekersdata.Any())
+                {
+                   
+                    var imagememorystream = new MemoryStream(dbadmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().bezoekersdata.FirstOrDefault());
+                    System.Drawing.Image imgfromstream = System.Drawing.Image.FromStream(imagememorystream);
+                    imgfromstream.Save("print2.png");
+                    Process p = new Process();
+                    p.StartInfo = new ProcessStartInfo()
+                    {
+                        CreateNoWindow = true,
+                        Verb = "print",
+                        FileName = Path.GetFullPath("print2.png")
+                    };
+                    p.Start();
+
+
+                    imagememorystream.Close();
+                }
+                if (dbparalleladmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().parallelbezoekersdata.Any())
+                {
+                    var imagememorystream = new MemoryStream(dbparalleladmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().parallelbezoekersdata.FirstOrDefault());
+                    System.Drawing.Image imgfromstream = System.Drawing.Image.FromStream(imagememorystream);
+                    imgfromstream.Save("print3.png");
+                    Process p = new Process();
+                    p.StartInfo = new ProcessStartInfo()
+                    {
+                        CreateNoWindow = true,
+                        Verb = "print",
+                        FileName = Path.GetFullPath("print3.png")
+                    };
+                    p.Start();
+
+
+                    imagememorystream.Close();
+                }
+                if (dbparalleladmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().parallelpreperatordata.Any())
+                {
+                    var imagememorystream = new MemoryStream(dbparalleladmin.data.Where(x121 => x121.id == Convert.ToInt32(pdffile)).FirstOrDefault().parallelpreperatordata.FirstOrDefault());
+                    System.Drawing.Image imgfromstream = System.Drawing.Image.FromStream(imagememorystream);
+                    imgfromstream.Save("print4.png");
+                    Process p = new Process();
+                    p.StartInfo = new ProcessStartInfo()
+                    {
+                        CreateNoWindow = true,
+                        Verb = "print",
+                        FileName = Path.GetFullPath("print4.png")
+                    };
+                    p.Start();
+
+
+                    imagememorystream.Close();
+                }
+
+
+                return View();
+
+            }
+            else
+            { return View(); }
         }
 
         public ActionResult Login()
@@ -213,6 +299,7 @@ namespace Walking_Dinner__asp.net_.Controllers
         {
             if (adminlogin.loginnaam == "adminlogin" && adminlogin.wachtwoord == "adminwachtwoord")
             {
+                ViewBag.model2 = dbparalleladmin.data.ToList();
                 return View("Adminpage", dbadmin.data.ToList());
             }
             else
